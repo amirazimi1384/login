@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+        <div class="tab-container">
+        <ul class="tabs">
+                    <li class="tab active" onclick="showTab('signin',this)">ورود</li>
+                    <li class="tab" onclick="showTab('signup',this)">ثبت نام</li>
+                </ul>
+            </div>
+    <div class="main-container">
+       
+        <div id="signin" class="form-container active"> 
+        
+            <form action="" method="post"> 
+                <label for=""><strong>فرم ورود</strong></label>
+                <br><br>
+                <label for="signin-email">ایمیل : </label>
+                <input type="email" name="signin-email" id="signin-email" placeholder="لطفا ایمیل خود را وارد کنید" required>
+                
+                <br>
+                
+                <label for="signin-password">رمز عبور : </label>
+                <input type="password" name="signin-password" id="signin-password" placeholder="لطفا رمز عبور خود را وارد کنید" required>
+                <br><br>
+
+                <button type="submit">ورود</button>
+            </form>
+        </div>
+    <div id="signup" class="form-container">
+        <form action="" method="post">
+            <label for=""><strong>فرم ثبت نام</strong></label>
+                <br><br>
+            <label for="signup-name">نام : </label>
+            <input type="text" name="signup-name" id="signup-name" placeholder="لطفا نام خود را وارد کنید" required>
+            
+            <br>
+            
+            <label for="signup-email">ایمیل : </label>
+            <input type="email" name="signup-email" id="signup-email" placeholder="لطفا ایمیل خود را وارد کنید" required>
+            
+            <br>
+            
+            <label for="signup-password">رمز عبور : </label>
+            <input type="password" name="signup-password" id="signup-password" placeholder="لطفا رمز عبور خود را وارد کنید" required>
+            
+            <br><br>   
+            
+            <button type="submit">ثبت نام</button>
+        </form>
+        </div>
+        </div>
+</body>
+<script src="login.js"></script>
+</html>

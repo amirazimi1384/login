@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    
+}
+
+@font-face {
+    font-family: 'shabnam-light';
+    src: url(./fonts/Shabnam-light.woff2);
+}
+@font-face {
+    font-family: 'shabnam-bold';
+    src: url(./fonts/Shabnam-Bold.woff2);
+}
+@font-face {
+    font-family: 'shabnam-thin';
+    src: url(./fonts/Shabnam-Thin.woff2);
+}
+
+html , body{
+    height: 100%; /* این باعث می‌شود که ارتفاع کل صفحه 100% باشد */
+    margin: 0; /* حذف فاصله‌های پیش‌فرض */
+    padding: 0; /* حذف پدینگ پیش‌فرض */
+}
+body{
+    font-family: 'shabnam-light';
+    background-color: #0e001d;
+    position: relative;
+}
+.main-container{
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-container{
+   position: absolute;
+   top: 0;
+   
+   width: 100%;
+   max-width: 500px;
+   opacity: 0;
+   visibility: hidden; /* فرم‌ها پنهان هستند */
+   transform: rotateY(-90deg); /* فرم‌ها به حالت چرخش شروع می‌کنند */
+   transition: opacity 0.6s ease, visibility 0s 0.6s, transform 0.6s ease;
+}
+.form-container.active{
+    position: relative;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.192);
+    box-shadow:0px 0px 25px rgb(255, 213, 0);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.266);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 1;
+    visibility: visible; /* فرم‌ها نمایان می‌شوند */
+    transform: rotateY(0deg); /* فرم‌ها به موقعیت اصلی خود با چرخش باز می‌گردند */
+    transition: opacity 0.6s ease, visibility 0.6s, transform 0.6s ease;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    color: white;
+    background:none;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.726);
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color:rgb(206, 212, 13);
+  box-shadow:0px 0px 25px rgb(255, 213, 0);
+  outline: none;
+}
+button[type="submit"]{
+    width: 100%;
+    padding: 14px 0;
+    background:none;
+    color: white;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button[type="submit"]:hover{
+    border-color:#16c61c;
+    box-shadow: 0 0 25px rgba(0, 255, 8, 0.986);
+}
+label strong{
+  font-size: 25px;
+}
+label{
+    font-size: 20px;
+    color:rgb(255, 247, 0);
+    margin-bottom: 8px;
+    display: inline;
+    font-weight: 600;
+  }
+  .tab-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    border-radius: 8px;
+    /* box-shadow:0px 0px 25px rgb(13, 209, 212);
+    background: rgba(72, 72, 72, 0.459); */
+  }
+  .tabs {
+    /* position: absolute;
+    top: 0%; */
+    width: 100%;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin:20px 0;
+    /* border-bottom: 2px solid #ddd; */
+  }
+  .tabs .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: rgba(255, 255, 255, 0.192);
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  .tabs .tab:hover {
+    background-color: white;
+    color: black;
+  outline: none;
+  }
+  .tabs .active {
+    
+    color: white;
+    border-color:rgb(206, 212, 13);
+  box-shadow:0px 0px 25px rgb(255, 213, 0);
+  outline: none;
+  
+}
+
+  
