@@ -1,1 +1,1 @@
-start game is the main page and the login is the login page
+"start game" is the home page and the "login" is the login page
